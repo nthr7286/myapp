@@ -1,14 +1,18 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import App from './Components/App'
 import * as serviceWorker from './serviceWorker'
 
+const theme = createMuiTheme({
+})
+
 ReactDOM.render(
-  <Fragment>
+  <ThemeProvider theme={theme}>
     <CssBaseline />
     <App />
-  </Fragment>,
+  </ThemeProvider>,
   document.getElementById('root')
 )
 
